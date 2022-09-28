@@ -1,10 +1,12 @@
 <% if flash[:notice] %>
     <%= flash[:notice] %>
 <% end %>
+<div id="pageBody">
 <% @tweets.each do |tweet| %>
 
     <p><%= tweet.message %></p>
     <p><%= ((Time.current - tweet.tdate)/60).floor %>分前</p>
+    <%= image_tag 'orange.jpg' %>
     
 
  
@@ -14,3 +16,7 @@
 
 <% end %>
 <p><%= link_to '投稿', '/tweets/new' %></p>
+</div><br></br>
+
+
+
